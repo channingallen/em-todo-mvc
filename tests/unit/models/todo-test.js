@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('todos', 'Unit | Model | todos', {
+moduleForModel('todo', 'Unit | Model | todo', {
   // Specify the other units that are required for this test.
   needs: []
 });
