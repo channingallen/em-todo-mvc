@@ -1,0 +1,7 @@
+{{#if task.completed}}
+  <span onclick={{action (action "toggleTaskStatus" task)}}>(X)</span>
+  <span style="text-decoration:line-through">CMPL</span>
+{{else}}
+  <span onclick={{action (action "toggleTaskStatus" task)}}>(_)</span>
+  <span>ACTV</span>
+{{/if}}

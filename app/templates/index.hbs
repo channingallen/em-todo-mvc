@@ -1,15 +1,7 @@
 <ul>
   {{#each tasks as |task|}}
     <li>
-      <span>
-        {{#if task.completed}}
-          <span onclick={{action (action "toggleTaskStatus" task)}}>(X)</span>
-          <span style="text-decoration:line-through">CMPL</span>
-        {{else}}
-          <span onclick={{action (action "toggleTaskStatus" task)}}>(_)</span>
-          <span>ACTV</span>
-        {{/if}}
-      </span>
+      {{status-checkbox task=task}}
 
       <span>{{task.name}}</span>
       <span onclick={{action (action "removeTask" task)}}>x</span>
