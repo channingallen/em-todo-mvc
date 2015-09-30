@@ -1,0 +1,11 @@
+<ul>
+  {{#each tasks as |task|}}
+    <li>
+      {{status-checkbox checked=(readonly task.completed)
+                        toggle=(action "toggleTaskStatus" task)}}
+
+      <span>{{task.name}}</span>
+      <span onclick={{action (action "removeTask" task)}}>x</span>
+    </li>
+  {{/each}}
+</ul>
