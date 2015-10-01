@@ -1,7 +1,9 @@
 <ul>
   {{#each tasks as |task|}}
-    <li>
-      <span>{{task.name}}</span>
-    </li>
+    {{task-row task=task
+               checked=(readonly task.completed)
+               toggle=(action "toggleTaskStatus" task)
+               remove=(action "removeTask" task)
+               rename=(action "renameTask" task)}}
   {{/each}}
 </ul>

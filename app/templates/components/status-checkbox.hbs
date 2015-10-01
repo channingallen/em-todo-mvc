@@ -1,7 +1,5 @@
 {{#if attrs.checked}}
   <span onclick={{action (action "toggleStatus")}}>(X)</span>
-  <span style="text-decoration:line-through;">cmpl</span>
 {{else}}
   <span onclick={{action (action "toggleStatus")}}>(_)</span>
-  <span>actv</span>
 {{/if}}

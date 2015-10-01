@@ -2,7 +2,8 @@
                   toggle=(action attrs.toggle)}}
 
 <!-- TODO: in the tags below, replace each _ with "{{" or "}}" -->
-{{editable-task-name name=(readonly attrs.task.name)
+{{editable-task-name completed=(readonly attrs.task.completed)
+                     name=(readonly attrs.task.name)
                      rename=(action attrs.rename)}}
 
 <span onclick={{action (action attrs.remove)}}>X</span>
