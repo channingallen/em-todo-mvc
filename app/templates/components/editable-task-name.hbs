@@ -1,0 +1,7 @@
+{{#if editing}}
+  {{input enter=(action "handleInputEnter")
+          escape-press=(action "stopEditing")
+          value=(readonly attrs.name)}}
+{{else}}
+  <span ondblclick={{action (action "startEditing")}}>{{attrs.name}}</span>
+{{/if}}
