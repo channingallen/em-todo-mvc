@@ -3,4 +3,5 @@
 
 <!-- TODO: in the tags below, replace each _ with "{{" or "}}" -->
 <span>{{attrs.task.name}}</span>
-<!--span onclick=_action (action "removeTask" task)_>x</span-->
+
+<span onclick={{action (action attrs.remove)}}>X</span>

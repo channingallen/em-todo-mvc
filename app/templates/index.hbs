@@ -1,15 +1,8 @@
 <ul>
   {{#each tasks as |task|}}
-    <li>
-      {{task-row task=task
-                 checked=(readonly task.completed)
-                 toggle=(action "toggleTaskStatus" task)
-                 remove=(action "removeTask" task)}}
-      {{!--status-checkbox checked=(readonly task.completed)
-                        toggle=(action "toggleTaskStatus" task)--}}
-
-      <!--span>{{task.name}}</span>
-      <span onclick={{action (action "removeTask" task)}}>x</span-->
-    </li>
+    {{task-row task=task
+               checked=(readonly task.completed)
+               toggle=(action "toggleTaskStatus" task)
+               remove=(action "removeTask" task)}}
   {{/each}}
 </ul>
