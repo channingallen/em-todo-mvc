@@ -2,8 +2,9 @@
 
 <div>
   <div>
-    <span onclick={{action (action "completeAllTasks")}}>[ complete all ]</span>
-    <input type="text" placeholder="What needs to be done?">
+    <span onclick={{action (action "toggleCompleteAll")}}>[ v ]</span>
+    <!--input type="text" placeholder="What needs to be done?"-->
+    {{new-task-input enter=(action "handleInputEnter")}}
   </div>
 
   {{outlet}}

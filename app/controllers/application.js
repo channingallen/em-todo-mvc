@@ -6,10 +6,9 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
-    completeAllTasks() {
-      this.store.peekAll('task').forEach(function (task) {
-        task.set('completed', true);
-      });
+    handleInputEnter(inputValue) {
+      // find the number of tasks
+      this.store.createRecord('task', { name: inputValue });
     },
 
     removeCompletedTasks() {
@@ -17,6 +16,12 @@ export default Ember.Controller.extend({
         if (task.get('completed')) {
           task.deleteRecord();
         }
+      });
+    },
+
+    toggleCompleteAll() {
+      this.store.peekAll('task').forEach(function (task) {
+        task.set('completed', true);
       });
     }
   }
