@@ -20,9 +20,21 @@ export default Ember.Controller.extend({
     },
 
     toggleCompleteAll() {
+      let someTasksActive = false;
       this.store.peekAll('task').forEach(function (task) {
-        task.set('completed', true);
+        if (!task.get('completed')) {
+          someTasksActive = true;
+        }
       });
+      if (someTasksActive === true) {
+        this.store.peekAll('task').forEach(function (task) {
+          task.set('completed', true);
+        });
+      } else {
+        this.store.peekAll('task').forEach(function (task) {
+          task.set('completed', false);
+        });
+      }
     }
   }
 });
