@@ -4,27 +4,34 @@
 
 <div class="todo-container">
   <div class="todo-container__add-task-row">
-    <i class="fa fa-chevron-down"
-       onclick={{action (action "toggleCompleteAll")}}></i>
+    {{#if numTasks}}
+      <i class="fa fa-chevron-down"
+         onclick={{action (action "toggleCompleteAll")}}></i>
+    {{/if}}
     {{new-task-input enter=(action "handleInputEnter")}}
   </div>
 
-  {{outlet}}
+  {{#if numTasks}}
+    {{outlet}}
+  {{/if}}
 
-  <div class="todo-footer">
-    <p class="footer__remaining-task-count">{{numActiveTasks}} items left</p>
-    <ul class="footer__task-status-filter-list">
-      <li>{{link-to "All" "index"}}</li>
-      <li>{{link-to "Active" "active"}}</li>
-      <li>{{link-to "Completed" "completed"}}</li>
-    </ul>
+  {{#if numTasks}}
+    <div class="todo-footer">
+      <p class="footer__remaining-task-count">{{numActiveTasks}} items left</p>
+      <p class="footer__remaining-task-count">numTasks: {{numTasks}}</p>
+      <ul class="footer__task-status-filter-list">
+        <li>{{link-to "All" "index"}}</li>
+        <li>{{link-to "Active" "active"}}</li>
+        <li>{{link-to "Completed" "completed"}}</li>
+      </ul>
 
-    {{#if completedTasksExist}}
-      <div class="footer__clear-completed-button" onclick={{action (action "removeCompletedTasks")}}>
-        Clear completed (dynamic)
-      </div>
-    {{/if}}
-  </div>
+      {{#if completedTasksExist}}
+        <div class="footer__clear-completed-button" onclick={{action (action "removeCompletedTasks")}}>
+          Clear completed (dynamic)
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
 </div>
 
 <footer>
