@@ -1,2 +1,18 @@
-@import "index.scss";
-@import "todo-footer.scss";
+@import
+  "global/colors",
+  "global/fonts",
+  "global/mixins",
+  "global/z-indices";
+
+@import
+  "base/reset",
+  "base/elements";
+
+@import
+  "components/editable-task-name",
+  "components/footer",
+  "components/new-task-input",
+  "components/status-checkbox",
+  "components/task-row",
+  "components/todo-container",
+  "components/todo-footer";
