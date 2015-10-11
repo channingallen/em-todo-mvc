@@ -4,3 +4,11 @@ html, body {
     text-decoration: underline;
   }
 }
+
+.todo-container {
+  border: 1px solid black;
+}
+
+.todo-container__add-task-row {
+  border-bottom: 1px solid black;
+}
