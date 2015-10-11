@@ -5,14 +5,13 @@
 <div>
   <div>
     <span onclick={{action (action "toggleCompleteAll")}}>[ v ]</span>
-    <!--input type="text" placeholder="What needs to be done?"-->
     {{new-task-input enter=(action "handleInputEnter")}}
   </div>
 
   {{outlet}}
 
   <footer>
-    <p>X items left</p>
+    <p>{{numActiveTasks}} items left</p>
     <ul>
       <li>{{link-to "All" "index"}}</li>
       <li>{{link-to "Active" "active"}}</li>

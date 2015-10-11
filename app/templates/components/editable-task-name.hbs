@@ -1,11 +1,15 @@
 {{#if editing}}
   {{input enter=(action "handleInputEnter")
           escape-press=(action "stopEditing")
-          focus-out=(action "handleInputEnter")
+          focusOnInsert=true
+          focus-out=(action "stopEditing")
           value=(readonly attrs.name)}}
 {{else}}
   {{#if attrs.completed}}
-    <span ondblclick={{action (action "startEditing")}} style="text-decoration:line-through;">{{attrs.name}}</span>
+    <span ondblclick={{action (action "startEditing")}}
+          style="text-decoration:line-through;">
+      {{attrs.name}}
+    </span>
   {{else}}
     <span ondblclick={{action (action "startEditing")}}>{{attrs.name}}</span>
   {{/if}}

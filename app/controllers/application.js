@@ -5,6 +5,10 @@ export default Ember.Controller.extend({
     return this.get('tasks').filterBy('completed').get('length') > 0;
   }),
 
+  numActiveTasks: Ember.computed('tasks.@each.completed', function () {
+    return this.get('tasks').rejectBy('completed').get('length');
+  }),
+
   actions: {
     handleInputEnter(inputValue) {
       // find the number of tasks

@@ -2,13 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   editing: false,
-  
+
   tagName: 'span',
+
+  _setEditingToFalse() {
+    this.set('editing', false);
+  },
 
   actions: {
     handleInputEnter(inputValue) {
       this.attrs.rename(inputValue);
-      this.set('editing', false);
+      this._setEditingToFalse();
     },
 
     startEditing() {
@@ -16,7 +20,7 @@ export default Ember.Component.extend({
     },
 
     stopEditing() {
-      this.set('editing', false);
+      this._setEditingToFalse();
     }
   }
 });
