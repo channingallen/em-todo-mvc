@@ -1,6 +1,8 @@
 .todo-footer {
   align-items: center;
+  border-top: $todo-container__list--border--faded;
   display: flex;
+  height: $todo-container__row--height;
   justify-content: space-between;
 }
 

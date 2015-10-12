@@ -1,6 +1,5 @@
 .todo-container {
   background: $todo-container__color--background;
-  border-top: 1px solid black;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
               0 25px 50px 0 rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -8,5 +7,14 @@
 }
 
 .todo-container__add-task-row {
-  border-bottom: 1px solid black;
+  height: $todo-container__row--height;
+}
+
+.todo-container__task-list {
+  border-top: $todo-container__list--border;
+}
+
+.todo-container__task-list__task {
+  border-top: $todo-container__list--border--faded;
+  height: $todo-container__row--height;
 }

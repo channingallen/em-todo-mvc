@@ -11,6 +11,8 @@ $app__color--secondary--dark: #4d4d4d;
 $app__color--secondary--light-one: #d9d9d9;
 $app__color--secondary--light-two: #777;
 $app__color--secondary--light-three: #bfbfbf; // footer
+$app__color--secondary--light-four: #e6e6e6; // border-top
+$app__color--secondary--light-five: #ededed; // border-top
 $app__color--tertiary--light-three: rgb(0, 170, 150);
 $todo-container__color--background: #fff;
 
@@ -31,4 +33,14 @@ $app__font-family--header: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 /////////////////
 
 $todo-container--width: 550px;
+$todo-container__row--height: 58px;
 $app__line-height--footer: 2em;
+
+///////////////////////
+//                   //
+//   Miscellaneous   //
+//                   //
+///////////////////////
+
+$todo-container__list--border: 1px solid $app__color--secondary--light-four;
+$todo-container__list--border--faded: 1px solid $app__color--secondary--light-five;
