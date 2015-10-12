@@ -1,0 +1,13 @@
+.app-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px 0 10px;
+}
+
+.app-footer__text {
+  color: $app__color--secondary--light-three;
+  font-size: $app__font-size--footer;
+  line-height: $app__line-height--footer;
+}

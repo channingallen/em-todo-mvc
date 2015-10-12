@@ -9,10 +9,13 @@
   "base/elements";
 
 @import
+  "components/app-body",
+  "components/app-footer",
   "components/editable-task-name",
   "components/footer",
   "components/new-task-input",
   "components/status-checkbox",
   "components/task-row",
   "components/todo-container",
-  "components/todo-footer";
+  "components/todo-footer",
+  "components/todo-header";

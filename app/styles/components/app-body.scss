@@ -1,0 +1,11 @@
+body {
+  background: $app__color--background;
+  margin: 20px auto;
+}
+
+h1 {
+  color: $app__color--primary;
+  font-family: $app__font-family--header;
+  font-size: $app__font-size--header;
+  font-weight: 100;
+}

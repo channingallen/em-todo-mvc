@@ -1,13 +1,10 @@
-html, body {
-  margin: 20px;
-  h2 {
-    color: $red;
-    text-decoration: underline;
-  }
-}
-
 .todo-container {
-  border: 1px solid black;
+  background: $todo-container__color--background;
+  border-top: 1px solid black;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: $todo-container--width;
 }
 
 .todo-container__add-task-row {
