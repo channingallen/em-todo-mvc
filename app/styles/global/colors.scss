@@ -23,8 +23,11 @@ $todo-container__color--background: #fff;
 /////////////////////
 
 $app__font-size--header: 100px;
+$app__font-size--task: 24px;
 $app__font-size--footer: 10px;
 $app__font-family--header: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$todo_container__font-size--new-task: 24px;
 
 /////////////////
 //             //
@@ -33,6 +36,8 @@ $app__font-family--header: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 /////////////////
 
 $todo-container--width: 550px;
+$todo-container__column-one--width: 60px;
+//$todo-container__column-two--width: 40px; // TODO THIS COMMIT
 $todo-container__row--height: 58px;
 $app__line-height--footer: 2em;
 

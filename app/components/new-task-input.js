@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['add-task-row__input-container'],
+
   tagName: 'span',
 
   actions: {

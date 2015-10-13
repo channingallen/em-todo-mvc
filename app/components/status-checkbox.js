@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'span',
+  classNames: ['task__status-checkbox'],
+
+  tagName: 'div',
 
   actions: {
     toggleStatus() {

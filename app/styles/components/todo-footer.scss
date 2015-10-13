@@ -1,4 +1,4 @@
-.todo-footer {
+.todo-container__footer {
   align-items: center;
   border-top: $todo-container__list--border--faded;
   display: flex;
@@ -6,14 +6,18 @@
   justify-content: space-between;
 }
 
-.footer__remaining-task-count {
+.todo-container__footer--item-container {
+  width: 33%;
+}
+
+.todo-container__footer__remaining-task-count {
 
 }
 
-.footer__task-status-filter-list {
+.todo-container__footer__task-status-filter-list {
   display: flex;
 }
 
-.footer__clear-completed-button {
+.todo-container__footer__clear-completed-button {
 
 }

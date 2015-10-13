@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['task__editable-task-name'],
+
   editing: false,
 
   tagName: 'span',

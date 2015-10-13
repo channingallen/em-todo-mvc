@@ -1,5 +1,5 @@
 {{#if attrs.checked}}
-  <span onclick={{action (action "toggleStatus")}}>(X)</span>
+  <i class="fa fa-check-circle-o fa-2x task__status-checkbox__icon" onclick={{action (action "toggleStatus")}}></i>
 {{else}}
-  <span onclick={{action (action "toggleStatus")}}>(_)</span>
+  <div class="checkbox-circle" onclick={{action (action "toggleStatus")}}></div>
 {{/if}}

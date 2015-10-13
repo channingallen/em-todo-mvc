@@ -1,3 +1,9 @@
+/////////////////
+//             //
+//   General   //
+//             //
+/////////////////
+
 .todo-container {
   background: $todo-container__color--background;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
@@ -6,15 +12,97 @@
   width: $todo-container--width;
 }
 
+//////////////////
+//              //
+//   New Task   //
+//              //
+//////////////////
+
 .todo-container__add-task-row {
+  align-items: center;
+  display: flex;
   height: $todo-container__row--height;
+
+  .add-task-row__toggle-complete-all-button {
+    margin: 0 (($todo-container__column-one--width / 2) - 11px);
+  }
+
+  .add-task-row__input-container {
+    width: 100%;
+
+    .add-task-row__input-container__input-field {
+      color: $app__color--secondary--dark;
+      font-family: $app__font-family--header;
+      font-size: $app__font-size--task;
+      font-weight: 300;
+      line-height: 2em;
+      width: 100%;
+    }
+
+    .add-task-row__input-container__input-field::-webkit-input-placeholder {
+      color: $app__color--secondary--light-five;
+      font-family: $app__font-family--header;
+      font-size: 25px;
+      font-style: italic;
+      font-weight: 100;
+    }
+
+    .add-task-row__input-container__input-field::-moz-placeholder {
+      font-size: $todo_container__font-size--new-task;
+      text-transform: uppercase;
+    }
+
+    .add-task-row__input-container__input-field:-moz-placeholder {
+      font-size: $todo_container__font-size--new-task;
+      text-transform: uppercase;
+    }
+
+    .add-task-row__input-container__input-field:-ms-input-placeholder {
+      font-size: $todo_container__font-size--new-task;
+      text-transform: uppercase;
+    }
+  }
 }
+
+///////////////////
+//               //
+//   Task List   //
+//               //
+///////////////////
 
 .todo-container__task-list {
   border-top: $todo-container__list--border;
-}
 
-.todo-container__task-list__task {
-  border-top: $todo-container__list--border--faded;
-  height: $todo-container__row--height;
+  .checkbox-circle {
+    border: 1px solid $app__color--secondary--light-three;
+    border-radius: 50px;
+    height: 27px;
+    width: 27px;
+  }
+
+  .todo-container__task-list__task {
+    align-items: center;
+    border-top: $todo-container__list--border--faded;
+    color: $app__color--secondary--dark;
+    display: flex;
+    font-family: $app__font-family--header;
+    font-size: $app__font-size--task;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    height: $todo-container__row--height;
+
+    .task__status-checkbox {
+      margin: 0 (($todo-container__column-one--width / 2) - 16px);
+
+      .task__status-checkbox__icon {
+        font-size: 31px;
+      }
+    }
+
+    .task__remove-button {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
 }
